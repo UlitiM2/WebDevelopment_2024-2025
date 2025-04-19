@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}<title>О себе</title>{% endblock %}
+{% block content %}
+<!-- bradcam_area  -->
+<div class="bradcam_area background-image: url(../img/12.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text text-center">
+                    <h3>О себе</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ bradcam_area  -->
+
+<div class="main_about_wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                 <div class="bradcam_text text-center">
+                    <h3>Бова Татьяна</h3>
+                </div>
+                <div class="bradcam_text text-center">
+                    <p> Всем 👋 Меня зовут Таня и я мастер маникюра с 2017 года. </br>Сделаю Ваши ручки обворожительными☺️🌸
+</br>Принимаю в 10 минутах от метро Ленинский проспект 🚇
+</br>Для записи проходи по ссылке для
+<a href="https://mst.link/bova_tanechka" > ОНЛАЙН </a> записи </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row">
+                    <div class="col-xl-6 col-md-6">
+                        <div class="about_thumb">
+                            <img src="{% static 'img/15.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6">
+                        <div class="about_thumb">
+                            <img src="{% static 'img/14.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
