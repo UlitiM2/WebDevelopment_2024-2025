@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Карта Изображений</title>
+    <style>
+        #myImage {
+            border: 1px solid black;
+        }
+        
+        .highlighted {
+            outline: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Карта Изображений</h1>
+<img id="myImage" src="photo.jpg" alt="Изображение" width="1180" height="700" usemap="#imageMap">
+<map name="imageMap">
+    <area shape="rect" coords="10,10,265,205" href="#area1" onclick="changeColor(this); return false;" class="clickableArea" title = "Фигура обводится">
+    <area shape="circle" coords="120,300,75" href="#area2" onclick="openLink('https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D1%83%D0%B3'); return false;" class="clickableArea" title = "Открывается ссылка">
+    <area shape="poly" coords="904, 93, 657, 279, 750, 585, 1060, 585, 1147, 279" href="#area3" onclick="alert('Вы кликнули на многоугольник!'); return false;" class="clickableArea" title = "Вылетает надпись">
+    <area shape="poly" coords="134, 538, 351, 460, 570, 539, 355, 615" href="#area4" onclick=openPhoto('1.jpg'); return false;" class="clickableArea" title = "Открывается фото">
+	<area shape="poly" coords="375, 39, 374, 349, 582, 346" href="#area5" onclick=changeBackground('blue'); return false;" class="clickableArea"title = "Фон меняет цвет">
+</map>
+
+<script>
+	colorchange = false;
+
+    function changeColor(area) {
+        area.classList.toggle("highlighted");
+    }
+
+    function openLink(url) {
+        window.open(url);
+    }
+	
+	function openPhoto(photo) {
+        window.open(photo);
+    }
+	
+	function changeBackground(color) {
+		if (!colorchange) {
+			document.body.style.backgroundColor = color;
+			colorchange = true;
+		} else {
+			document.body.style.backgroundColor = 'white';
+			colorchange = false;
+		}
+	}
+</script>
+
+</body>
+</html>
+ 
